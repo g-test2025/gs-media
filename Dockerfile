@@ -5,6 +5,10 @@ FROM alpine:latest
 RUN apk add --no-cache git
 RUN apk add --no-cache python3 py3-pip
 
+RUN python3 -m venv myenv
+
+RUN source myenv/bin/activate
+
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # 3. Set a working directory inside the container
