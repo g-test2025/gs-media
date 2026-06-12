@@ -1,1 +1,3 @@
-make build
+FROM ubuntu:latest
+# ... setup steps, installing make, copying files ...
+RUN make up
