@@ -1,3 +1,4 @@
-FROM ubuntu:latest
-# ... setup steps, installing make, copying files ...
-RUN make up
+git clone https://github.com/eracle/OpenOutreach.git
+cd OpenOutreach
+docker compose build
+docker compose up
