@@ -19,6 +19,11 @@ COPY Makefile .
 
 RUN pwd
 
+COPY requirements.txt .
+
+# 4. Install dependencies without saving local download caches
+RUN pip install --no-cache-dir -r requirements.txt
+
 RUN make setup
 
 RUN playwright install --with-deps chromium
