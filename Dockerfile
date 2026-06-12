@@ -5,7 +5,7 @@ FROM alpine:latest
 RUN apk add --no-cache git
 
 # 3. Set a working directory inside the container
-WORKDIR /
+WORKDIR /OpenOutreach
 
 RUN git clone https://github.com/g-test2025/gs-media.git
 
@@ -14,7 +14,7 @@ RUN apk add python3 \
             g++ \
             alpine-sdk 
 
-RUN make up
+RUN make setup
 
 RUN playwright install --with-deps chromium
 
