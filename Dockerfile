@@ -28,7 +28,8 @@ COPY requirements.txt .
 
 
 # 4. Install dependencies without saving local download caches
-RUN pip3 install --no-cache-dir -r requirements.txt
+#RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install "dbt-core>=1.11,<1.12" "dbt-duckdb>=1.10,<1.11" protobuf==6.33.5 pydantic python-dotenv jsonpath-ng pandas langchain langchain-openai jinja2 termcolor "Django>=5.2,<7.0" tendo pyyaml scikit-learn duckdb fastembed
 
 RUN make setup
 
