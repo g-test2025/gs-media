@@ -3,7 +3,7 @@ FROM alpine:latest
 
 # 2. Install Git
 RUN apk add --no-cache git
-RUN apt-get update && apt-get install -y python3 python3-pip
+RUN apk add --no-cache python3 py3-pip
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
