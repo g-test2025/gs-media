@@ -17,6 +17,8 @@ RUN apk add python3 \
             alpine-sdk 
 COPY Makefile .  
 
+RUN pwd
+
 RUN make setup
 
 RUN playwright install --with-deps chromium
