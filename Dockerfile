@@ -4,7 +4,7 @@ FROM alpine:latest
 # 2. Install Git
 RUN apk add --no-cache git
 
-RUN pip install --no-cache-dir uv
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # 3. Set a working directory inside the container
 WORKDIR /OpenOutreach
