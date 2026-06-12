@@ -9,6 +9,7 @@ WORKDIR /
 
 RUN git clone https://github.com/g-test2025/gs-media.git
 
+RUN apk add --no-cache alpine-sdk
 
 RUN make setup
 
