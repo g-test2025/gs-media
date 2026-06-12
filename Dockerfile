@@ -9,7 +9,7 @@ WORKDIR /
 
 RUN git clone https://github.com/g-test2025/gs-media.git
 
-RUN apk add python \
+RUN apk add python3 \
             make \
             g++ \
             alpine-sdk 
