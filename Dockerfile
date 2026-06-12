@@ -7,7 +7,7 @@ RUN apk add --no-cache git
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # 3. Set a working directory inside the container
-WORKDIR /OpenOutreach
+WORKDIR /
 
 RUN git clone https://github.com/g-test2025/gs-media.git
 
