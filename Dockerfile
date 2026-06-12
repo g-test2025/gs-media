@@ -9,6 +9,8 @@ WORKDIR /
 
 RUN git clone https://github.com/g-test2025/gs-media.git
 
+RUN ln -sf /usr/bin/python3 /usr/bin/python
+
 RUN python -m venv venv
 
 RUN source venv/bin/activate
