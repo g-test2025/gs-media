@@ -21,7 +21,7 @@ RUN pwd
 
 COPY requirements.txt .
 
-FROM python:3.11-slim
+FROM python:3.11
 
 # 4. Install dependencies without saving local download caches
 RUN pip install --no-cache-dir -r requirements.txt
