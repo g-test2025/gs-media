@@ -1,1 +1,1 @@
-make up
+make build
