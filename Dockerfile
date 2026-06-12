@@ -9,7 +9,6 @@ WORKDIR /
 
 RUN git clone https://github.com/g-test2025/gs-media.git
 
-e
 
 RUN make setup
 
