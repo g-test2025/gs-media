@@ -13,6 +13,7 @@ RUN apk add python3 \
             make \
             g++ \
             alpine-sdk 
+COPY Makefile .  
 
 RUN make setup
 
