@@ -27,8 +27,8 @@ up-view: ## run the defined service in Docker Compose and open vinagre
 
 install: ## install all Python dependencies (local dev)
 	pip install uv 2>/dev/null || true
-	#uv pip install --no-deps -r requirements/crm.txt
-	#uv pip install -r requirements/local.txt
+	uv pip install --no-deps -r requirements/crm.txt
+	uv pip install -r requirements/local.txt
 
 setup: install ## install deps + migrate + bootstrap CRM
 	python manage.py migrate --no-input
