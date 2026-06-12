@@ -9,6 +9,8 @@ RUN python3 -m venv myenv
 
 RUN source myenv/bin/activate
 
+ENV PATH="/myenv/bin:$PATH"
+
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # 3. Set a working directory inside the container
